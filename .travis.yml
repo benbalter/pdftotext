@@ -7,3 +7,6 @@ cache:
 
 before_script:
   - apt-get install -y poppler-utils
+
+install:
+  - gem install bundler --version '1.10.6'
