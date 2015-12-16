@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["ben.balter@github.com"]
 
   spec.summary       = "A Ruby wrapper for the `pdftotext` command line library"
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/benbalter/pdftotext"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
