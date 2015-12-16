@@ -8,6 +8,7 @@ module Pdftotext
     def run_command(*args)
       options = DEFAULT_OPTIONS.merge(args.pop)
       args = args.concat options_to_args(options)
+      puts args.inspect
       output, status = Open3.capture2e(bin_path, *args)
       raise "Command `#{bin_path} #{args.join(" ")}` failed: #{output}" if status.exitstatus != 0
       output

@@ -4,11 +4,6 @@ describe Pdftotext::Document do
 
   subject { Pdftotext::Document.new(fixture_path) }
 
-  it "creates the tempfile" do
-    tempfile = subject.send(:tempfile)
-    expect(File.exists?(tempfile.path)).to eql(true)
-  end
-
   it "knows the path" do
     expect(subject.path).to eql(fixture_path)
   end
