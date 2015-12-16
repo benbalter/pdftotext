@@ -1,12 +1,13 @@
 language: ruby
-sudo: false
+sudo: true
 
 cache:
   - bundler
   - apt
 
 before_script:
-  - apt-get install -y poppler-utils
+  - sudo apt-get update
+  - sudo apt-get install -y poppler-utils
 
 install:
   - gem install bundler --version '1.10.6'
