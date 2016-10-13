@@ -22,3 +22,5 @@ pages.first.number
 pages.first.text
 => "The text of the PDF"
 ```
+
+Both methods take an optional hash of command line arguments to pass to `pdftotext`. The only one by default being `-layout`.
