@@ -8,7 +8,7 @@ describe Pdftotext::CLI do
   it "converts options to args" do
     options = {:foo => true, :bar => false, :page => 1}
     args = subject.send(:options_to_args, options)
-    expect(args).to eql(["-foo", "-page 1"])
+    expect(args).to eql(["-foo", "-page", "1"])
   end
 
   it "runs a command" do
