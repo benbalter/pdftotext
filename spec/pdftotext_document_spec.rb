@@ -23,4 +23,9 @@ describe Pdftotext::Document do
     expect(pages.last.text).to eql("This is another test.\n")
     expect(pages.last.number).to eql(2)
   end
+
+  it "respects non-default command line arguments" do
+    pages = subject.pages({l: 1})
+    expect(pages.count).to eql(1)
+  end
 end

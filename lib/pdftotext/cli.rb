@@ -23,11 +23,8 @@ module Pdftotext
       args = []
       options.each do |key, value|
         next if value === false
-        if value === true
-          args.push "-#{key}"
-        else
-          args.push "-#{key} #{value}"
-        end
+        args.push "-#{key}"
+        args.push value.to_s unless value === true
       end
       args
     end
