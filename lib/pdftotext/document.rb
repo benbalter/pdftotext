@@ -9,7 +9,7 @@ module Pdftotext
     def text(options={})
       Tempfile.open(['pdftotext', '.txt']) do |file|
         Pdftotext.cli.run_command path, file.path, options
-        file.read.force_encoding("ISO-8859-1").encode("utf-8", replace: nil)
+        file.read #Angela's code
       end
     end
 
