@@ -1,3 +1,4 @@
+require "tempfile"
 require "cliver"
 require "open3"
 require "pdftotext/version"
